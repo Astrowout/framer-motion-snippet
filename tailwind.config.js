@@ -10,7 +10,7 @@ module.exports = {
     extend: {
       fontFamily: {
         "display": ["Newake",  ...fontFamily.sans],
-      }
+      },
     },
   },
   plugins: [],
