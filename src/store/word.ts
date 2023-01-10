@@ -19,12 +19,21 @@ export default create<WordState>((set) => ({
     word: "Plopkoeken",
     customWord: false,
     setRandomWord: () => {
-        const randomIndex = Math.floor(Math.random() * WORDS.length);
-        const word = WORDS[randomIndex];
+        const availableWords = [...WORDS];
 
-        set({
-            word,
-            customWord: true,
+        set((state) => {
+            const index = availableWords.indexOf(state.word);
+            if (index > -1) {
+                availableWords.splice(index, 1);
+            }
+    
+            const randomIndex = Math.floor(Math.random() * availableWords.length);
+            const word = availableWords[randomIndex];
+        
+            return {
+                word,
+                customWord: true,
+            }
         });
     },
 }));
