@@ -16,7 +16,7 @@ export default function Button({
             disabled={isLoading}
             className={className}
         >
-            <span className="font-display uppercase tracking-wide text-lg group flex items-center justify-center text-neutral-500 hover:text-rose-500 shadow-xl h-14 px-6 rounded-full transition-colors border border-neutral-500 hover:border-rose-500 bg-neutral-900">
+            <span className="pt-0.5 font-display uppercase tracking-wide text-lg group flex items-center justify-center text-neutral-500 hover:text-rose-500 shadow-xl h-14 px-6 rounded-full transition-colors border border-neutral-500 hover:border-rose-500 bg-neutral-900">
                 { children }
             </span>
         </button>
